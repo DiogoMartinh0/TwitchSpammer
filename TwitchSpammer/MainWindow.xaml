@@ -1,0 +1,27 @@
+﻿<Window x:Class="TwitchSpammer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TwitchSpammer"
+        mc:Ignorable="d"
+        Title="TwitchSpammer" Height="350" Width="564" Loaded="Window_Loaded" Closing="Window_Closing">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="323*"/>
+            <ColumnDefinition Width="194*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="tbx_Utilizador" HorizontalAlignment="Left" Height="22" Margin="82,10,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="317" ToolTip="Insert your username here" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="tbx_Canal" HorizontalAlignment="Left" Height="22" Margin="82,116,0,0" TextWrapping="Wrap" Text="Channel" VerticalAlignment="Top" Width="158"/>
+        <Label x:Name="label" Content="ex: mychannel, channel2" HorizontalAlignment="Left" Margin="245,116,0,0" VerticalAlignment="Top" Height="32" Width="154" Grid.ColumnSpan="2" FontSize="10.667" IsEnabled="False"/>
+        <Slider x:Name="sld_Velocidade" HorizontalAlignment="Left" Margin="82,164,0,0" VerticalAlignment="Top" Width="317" ValueChanged="sld_Velocidade_ValueChanged" SmallChange="5" Maximum="120" LargeChange="10" IsSnapToTickEnabled="True" ToolTip="In this slider you must chose how many messages you want to send per minute" Grid.ColumnSpan="2"/>
+        <Label x:Name="lb_SliderManagement" Content="&#xD;&#xA;" HorizontalAlignment="Left" Margin="57,160,0,0" VerticalAlignment="Top" Height="34" Width="142" FontSize="10.667" Grid.Column="1"/>
+        <Button x:Name="btn_Start" Content="Apply tilt" HorizontalAlignment="Left" Margin="71,274,0,0" VerticalAlignment="Top" Width="128" Height="35" Click="btn_Start_Click" IsEnabled="False" Grid.Column="1"/>
+        <TextBox x:Name="tbx_Mensagem" HorizontalAlignment="Left" Height="62" Margin="82,200,0,0" TextWrapping="Wrap" Text="Message to send" VerticalAlignment="Top" Width="317" Grid.ColumnSpan="2"/>
+        <Label x:Name="label_Status" Content="" HorizontalAlignment="Left" Margin="82,274,0,0" VerticalAlignment="Top" Height="35" Width="292" Grid.ColumnSpan="2"/>
+        <Button x:Name="btn_Login" Content="Login" HorizontalAlignment="Left" Margin="71,10,0,0" VerticalAlignment="Top" Width="128" Height="55" Click="btn_Login_Click" Grid.Column="1"/>
+        <PasswordBox x:Name="pB_PalavraPasse" HorizontalAlignment="Left" Margin="82,44,0,0" VerticalAlignment="Top" Width="317" Height="21" Password="Password" ToolTip="Insert your oauth here" Grid.ColumnSpan="2"/>
+        <Label x:Name="label1" Content="Open this link https://twitchapps.com/tmi/ and after login in &#xD;&#xA;paste the oauth:xxx in the box above" HorizontalAlignment="Left" Margin="82,65,0,0" VerticalAlignment="Top" Width="402" Height="46" Grid.ColumnSpan="2" IsEnabled="False" RenderTransformOrigin="0.5,0.5"/>
+
+    </Grid>
+</Window>
